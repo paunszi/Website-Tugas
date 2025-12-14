@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #f5f8ff;
+}
+.wrapper {
+  width: 95%;
+  margin: 2em auto;
+}
+#buttons {
+  text-align: left;
+  margin-bottom: 2em;
+}
+.button-value {
+  border: 2px solid #6759ff;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  background-color: transparent;
+  color: #6759ff;
+  cursor: pointer;
+  margin: 0.5em;
+  transition: 0.3s;
+}
+.button-value:hover,
+.active {
+  background-color: #6759ff;
+  color: #ffffff;
+}
+#products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2em;
+}
+.card {
+  background-color: #ffffff;
+  max-width: 18em;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(1, 2, 68, 0.08);
+  margin: 0 auto;
+}
+.image-container {
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+.container {
+  padding-top: 1em;
+  color: #110f29;
+}
+h5 {
+  font-weight: 500;
+}
+.hide {
+  display: none;
+}
+
+/* Hero / content awalan styles */
+.hero-heading {
+  font-size: 1.75rem; /* base */
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem 0;
+}
+.hero-lead {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 42rem;
+}
+.cta-btn {
+  background-color: #10b981; /* emerald */
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.18);
+  transition: transform 150ms ease, box-shadow 150ms ease,
+    background-color 150ms ease;
+}
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(16, 185, 129, 0.2);
+  background-color: #059669;
+}
+
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 2.75rem;
+  }
+  .hero-lead {
+    font-size: 1.05rem;
+  }
+}
+
+/* Product card layout: keep buttons aligned at the bottom */
+#products > article {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* makes all cards the same height inside the grid */
+}
+
+#products > article > .relative.border {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+#products article form {
+  margin-top: auto; /* push buttons to the bottom */
+}
+
+#products article .add-to-cart,
+#products article .buy-now {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px; /* ensure consistent button heights */
+}
+
+/* small visual polish for buttons inside product cards */
+#products article .add-to-cart {
+  background-color: #f3f4f6;
+}
+#products article .buy-now {
+  background-color: #0f172a;
+}

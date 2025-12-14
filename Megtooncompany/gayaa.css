@@ -1,0 +1,36 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Posisi {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: white;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+.Posisi {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  background: white;
+}
+
+body {
+  padding-top: 64px;
+}
+
+header {
+  position: relative;
+  z-index: 70;
+}
